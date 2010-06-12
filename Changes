@@ -1,6 +1,11 @@
 Also see Moose::Manual::Delta for more details of, and workarounds
 for, noteworthy changes.
 
+  [API CHANGES]
+
+  * has '+foo' now has a blacklist rather than a whitelist for options which
+    can be legally inherited (doy, Tuomas Jormola).
+
 1.08 Tue, Jun 15, 2010
 
   [ENHANCEMENTS]
