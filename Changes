@@ -1,6 +1,13 @@
 Also see Moose::Manual::Delta for more details of, and workarounds
 for, noteworthy changes.
 
+  [API CHANGES]
+
+  * Roles now have their own default attribute metaclass to use during
+    application to a class, rather than just using the class's
+    attribute_metaclass. This is also overridable via ::MetaRole, with the
+    applied_attribute key in the role_metaroles hashref (doy).
+
 1.08 Tue, Jun 15, 2010
 
   [ENHANCEMENTS]
