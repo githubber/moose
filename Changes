@@ -15,6 +15,17 @@ for, noteworthy changes.
   * Accessors will now not be inlined if the instance metaclass isn't
     inlinable (doy).
 
+  * Union types always created a type constraint, even if their constituent
+    constraints did not have any coercions. This bogus coercion always
+    returned undef, which meant that a union which included Undef as a member
+    always coerced bad values to undef. Reported by Eric Brine. RT
+    #58411. (Dave Rolsky)
+
+  * Union types with coercions would always fall back to coercing the value to
+    undef (unintentionally). Now if all the coercions for a union type fail,
+    the value returned by the coercion is the original value that we attempted
+    to coerce. (Dave Rolsky).
+
 1.08 Tue, Jun 15, 2010
 
   [ENHANCEMENTS]
